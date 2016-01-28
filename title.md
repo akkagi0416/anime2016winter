@@ -49,7 +49,7 @@
 * [「ラクエンロジック」の公式Twitter](https://twitter.com/luck_and_logic)
 * [「ショートアニメ「私たち、らくろじ部！」」のオフィシャルサイト](http://luckandlogic-animation.com/special/20151116/post-3)
 * [「デュラララ!!×2 結」のオフィシャルサイト](http://www.durarara.com/)
-* [「デュラララ!!×2 結」の公式Twitter](https://twitter.com/drrr_anime/)
+* [「デュラララ!!×2 結」の公式Twitter](https://twitter.com/drrr_anime)
 * [「ナースウィッチ小麦ちゃんＲ」のオフィシャルサイト](http://www.ntv.co.jp/komugir/)
 * [「ナースウィッチ小麦ちゃんＲ」の公式Twitter](https://twitter.com/KomugichanR)
 * [「虹色デイズ」のオフィシャルサイト](http://rainbow-days.tv/)

@@ -1,12 +1,6 @@
 require 'active_record'
+require_relative 'db.rb'
 
-ActiveRecord::Base.establish_connection(
-  "adapter" => "sqlite3",
-  "database" => "./anime.db"
-)
-
-class Anime < ActiveRecord::Base
-end
 
 doc = open('title.md').read
 
