@@ -19,10 +19,13 @@ Anime.where.not('screen_name': nil).each do |anime|
 
   begin
     followers_count = client.user(anime.screen_name).followers_count
+    img             = client.user(anime.screen_name).profile_image_url.to_s
+    anime.update(img: img.sub(/_normal/, '_200x200'))
     anime.records.create(
       date: today,
       followers_count: followers_count
     )
+
     $logger.info(anime.title)
   rescue => e
     $logger.error e

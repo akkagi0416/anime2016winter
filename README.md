@@ -20,3 +20,7 @@ $ ruby pickup.rb
 ```
 
 デュララのscreen_nameがおかしかったので、手動でtitle.mdを加工
+
+# record.rb
+
+cronでrecordを定期的に実行して記録
