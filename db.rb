@@ -11,4 +11,5 @@ end
 
 class Record < ActiveRecord::Base
   belongs_to :anime
+  scope :today, -> { where(date: Time.now.strftime("%Y-%m-%d")) }
 end
