@@ -1,8 +1,10 @@
 require 'twitter'
 require 'dotenv'
 require_relative 'db.rb'
+require 'logger'
 
 Dotenv.load
+$logger = Logger.new('anime.log')
 
 client = Twitter::REST::Client.new do |config|
   config.consumer_key        = ENV['CONSUMER_KEY']
@@ -15,10 +17,14 @@ Anime.where.not('screen_name': nil).each do |anime|
   today = Time.now.strftime("%Y-%m-%d")
   next unless anime.records.where(date: today).empty?
 
-  followers_count = client.user(anime.screen_name).followers_count
-  anime.records.create(
-    date: today,
-    followers_count: followers_count
-  )
-  puts anime.title
+  begin
+    followers_count = client.user(anime.screen_name).followers_count
+    anime.records.create(
+      date: today,
+      followers_count: followers_count
+    )
+    $logger.info(anime.title)
+  rescue => e
+    $logger.error e
+  end
 end
